@@ -1,7 +1,7 @@
 const path = require("path");
 const glob = require("glob");
 const {rootUrl} = require("../utils/global");
-const { customEntry,server:serverConfig } = require("../.compile");
+const { customEntry,server:serverConfig } = require(`${rootUrl}/.compile`);
 
 function getEntries(globPath) {
     const files = glob.sync(globPath),

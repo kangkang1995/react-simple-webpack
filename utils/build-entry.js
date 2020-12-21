@@ -1,7 +1,8 @@
 const path = require("path");
 const glob = require("glob");
-const { customEntry } = require("../.compile");
+
 const {rootUrl} = require("../utils/global");
+const { customEntry } = require(`${rootUrl}/.compile`);
 function getEntries(globPath) {
     const files = glob.sync(globPath),
         entries = {};
