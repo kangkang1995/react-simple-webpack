@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpackConfig = require("../build/webpack.prod.js");
 
 const {rootUrl} = require("../utils/global");
-const { build: buildConfig, htmlChunk, favicon,isBundleAnalyzerPlugin } = require(`${rootUrl}/.compile`);
+const { build: buildConfig, htmlChunk, favicon,isBundleAnalyzerPlugin } = require(`${rootUrl}/webpack-config.js`);
 
 module.exports = (args) => {
     let config = buildConfig[args.type];

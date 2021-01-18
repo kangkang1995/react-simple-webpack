@@ -4,7 +4,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 let webpackConfig = require("../build/webpack.dev.js");
 const {rootUrl} = require("../utils/global");
-const { server: serverConfig, htmlChunk, favicon } = require(`${rootUrl}/.compile`);
+const { server: serverConfig, htmlChunk, favicon } = require(`${rootUrl}/webpack-config.js`);
 module.exports = (args) => {
     const { port } = args;
     Object.values(webpackConfig.entry).map((item) => {

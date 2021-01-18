@@ -7,7 +7,7 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const ForkTsCheckerNotifierWebpackPlugin = require("fork-ts-checker-notifier-webpack-plugin");
 const entry = require("../utils/server-entry");
 const { rootUrl } = require("../utils/global");
-const { isSpeedMeasurePlugin } = require(`${rootUrl}/.compile`);
+const { isSpeedMeasurePlugin } = require(`${rootUrl}/webpack-config.js`);
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 const smp = new SpeedMeasurePlugin();
 

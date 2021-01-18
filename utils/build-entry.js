@@ -2,7 +2,7 @@ const path = require("path");
 const glob = require("glob");
 
 const {rootUrl} = require("../utils/global");
-const { customEntry } = require(`${rootUrl}/.compile`);
+const { customEntry } = require(`${rootUrl}/webpack-config.js`);
 function getEntries(globPath) {
     const files = glob.sync(globPath),
         entries = {};

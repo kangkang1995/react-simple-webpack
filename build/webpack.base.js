@@ -4,7 +4,7 @@ const path = require("path");
 const ProgressBarPlugin = require("progress-bar-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { rootUrl } = require("../utils/global");
-const { customCopyPlugin,isImageCompression } = require(`${rootUrl}/.compile`);
+const { customCopyPlugin,isImageCompression } = require(`${rootUrl}/webpack-config.js`);
 //静态资源输出,将src目录下的assets文件夹复制到dist目录下
 const CopyPlugin = require("copy-webpack-plugin");
 
@@ -48,29 +48,30 @@ module.exports = {
                             // publicPath:"./dist/assets/images"
                         },
                     },
-                    {
-                        loader: "image-webpack-loader",
-                        options: {
-                            //   bypassOnDebug: true,
-                            mozjpeg: {
-                                progressive: true,
-                                quality: 65,
-                            },
-                            optipng: {
-                                enabled: false,
-                            },
-                            pngquant: {
-                                quality: [0.65, 0.9],
-                                speed: 4,
-                            },
-                            gifsicle: {
-                                interlaced: false,
-                            }, // the webp option will enable WEBP
-                            webp: {
-                                quality: 75,
-                            },
-                        },
-                    },
+                    // 先隐藏
+                    // {
+                    //     loader: "image-webpack-loader",
+                    //     options: {
+                    //         //   bypassOnDebug: true,
+                    //         mozjpeg: {
+                    //             progressive: true,
+                    //             quality: 65,
+                    //         },
+                    //         optipng: {
+                    //             enabled: false,
+                    //         },
+                    //         pngquant: {
+                    //             quality: [0.65, 0.9],
+                    //             speed: 4,
+                    //         },
+                    //         gifsicle: {
+                    //             interlaced: false,
+                    //         }, // the webp option will enable WEBP
+                    //         webp: {
+                    //             quality: 75,
+                    //         },
+                    //     },
+                    // },
                 ]:[
                     {
                         loader: "file-loader",

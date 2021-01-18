@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { rootUrl } = require("../utils/global");
 const entry = require("../utils/build-entry");
 const TerserPlugin = require("terser-webpack-plugin");
-const { isBundleAnalyzerPlugin } = require(`${rootUrl}/.compile`);
+const { isBundleAnalyzerPlugin } = require(`${rootUrl}/webpack-config.js`);
 // 可视化分析模块
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 module.exports = merge(common, {
