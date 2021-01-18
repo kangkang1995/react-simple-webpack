@@ -1,10 +1,10 @@
 {
   "name": "zhihui-webpack",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "华祥测试",
   "main": "index.js",
   "bin": {
-    "reactWebpack": "./bin/compile.js"
+    "zhihuiWebpack": "./bin/compile.js"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
