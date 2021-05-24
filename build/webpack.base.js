@@ -16,16 +16,20 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx|tsx|ts)$/,
+                test: /\.(js|mjs|jsx|tsx|ts)$/,
                 use: [
                     {
                         loader: "babel-loader",
                         options: {
                             cacheDirectory: true,
+                            plugins: [
+                                "@babel/plugin-proposal-optional-chaining",
+                                "@babel/plugin-proposal-nullish-coalescing-operator"
+                            ],
                         },
                     },
                 ],
-                exclude: /node_modules/,
+                exclude: /node_modules[\\/](?!@luban[\\/])/,
             },
             {
                 test: /\.(sa|sc|c)ss$/,
@@ -33,7 +37,14 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                use: ["style-loader", "css-loader", "postcss-loader", "less-loader"],
+                use: ["style-loader", "css-loader", "postcss-loader", {
+                    loader: "less-loader",
+                    options: {
+                        lessOptions: {
+                            javascriptEnabled: true 
+                        }
+                    }
+                }],
             },
             {
                 test: /\.(png|svg|jpe?g|gif)$/,

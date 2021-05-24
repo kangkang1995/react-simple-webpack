@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { rootUrl } = require("../utils/global");
 const entry = require("../utils/build-entry");
 const TerserPlugin = require("terser-webpack-plugin");
-const { isBundleAnalyzerPlugin } = require(`${rootUrl}/webpack-config.js`);
+const { isBundleAnalyzerPlugin,isDropConsole=true } = require(`${rootUrl}/webpack-config.js`);
 // 可视化分析模块
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 module.exports = merge(common, {
@@ -45,7 +45,14 @@ module.exports = merge(common, {
                     },
                     "css-loader",
                     "postcss-loader",
-                    "less-loader",
+                    {
+                        loader: "less-loader",
+                        options: {
+                            lessOptions: {
+                                javascriptEnabled: true 
+                            }
+                        }
+                    }
                 ],
             },
         ],
@@ -85,7 +92,7 @@ module.exports = merge(common, {
                 terserOptions: {
                     mangle: true, // 混淆，
                     compress: {
-                        drop_console: true, //传true就是干掉所有的console.*这些函数的调用.
+                        drop_console: isDropConsole, //传true就是干掉所有的console.*这些函数的调用.
                         drop_debugger: true, //干掉那些debugger;
                     },
                 },

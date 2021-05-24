@@ -7,7 +7,7 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const ForkTsCheckerNotifierWebpackPlugin = require("fork-ts-checker-notifier-webpack-plugin");
 const entry = require("../utils/server-entry");
 const { rootUrl } = require("../utils/global");
-const { isSpeedMeasurePlugin } = require(`${rootUrl}/webpack-config.js`);
+const { refreshErrorStatus = true, isSpeedMeasurePlugin } = require(`${rootUrl}/webpack-config.js`);
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 const smp = new SpeedMeasurePlugin();
 
@@ -25,7 +25,7 @@ const devWebpackConfig = merge(common, {
     module: {
         rules: [
             {
-                test: /\.(js|jsx|tsx|ts)$/,
+                test: /\.(js|mjs|jsx|tsx|ts)$/,
                 use: [
                     // 'happypack/loader?id=js',
                     {
@@ -36,7 +36,7 @@ const devWebpackConfig = merge(common, {
                         },
                     },
                 ],
-                exclude: /node_modules/,
+                exclude: /node_modules[\\/](?!@luban[\\/])/,
             },
         ],
     },
@@ -89,7 +89,9 @@ const devWebpackConfig = merge(common, {
         //     ],
         // }),
         // 官方热更新
-        new ReactRefreshPlugin(),
+        new ReactRefreshPlugin({
+            overlay: refreshErrorStatus,
+        }),
         new ForkTsCheckerWebpackPlugin({
             // 将async设为false，可以阻止Webpack的emit以等待类型检查器/linter，并向Webpack的编译添加错误。
             async: false,

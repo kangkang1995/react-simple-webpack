@@ -1,3 +1,5 @@
+> 目前是webpack4；等5稳定了，在更新到5
+
 支持一下配置
 1. 图片/视频/字体
 2. css/scss/less
@@ -5,7 +7,7 @@
 4. json
 5. js/es6等语法
 6. ts
-7. vue (准备去掉)
+7. vue (去掉了)
 8. react
 9. eslint
 10. 热更新
@@ -15,6 +17,23 @@
 14. 多入口 过滤 (只针对start服务时，原因是防止忘记关闭，导致build忘记打包)
 ---
 待完善中
+
+
+### 启动
+```
+npm run start  //默认 8282
+
+//可以这样
+npm run start 8585  //后面端口随意
+```
+
+### 打包 
+```
+npm run build  //默认 beta
+
+//可以这样
+npm run build prod  //build后面随意
+```
 
 ## 常见错误
 
@@ -148,26 +167,15 @@ isImageCompression:false,
 isSpeedMeasurePlugin:false,
 ```
 
-8. 是否启动 build 性能调试
+9. 是否启动 build 性能调试
 ```javascript
 // 默认不启动 false
 BundleAnalyzerPlugin:false,
 ```
-
-### 启动
-```
-npm run start  //默认 8282
-
-//可以这样
-npm run start 8585  //后面端口随意
-```
-
-### 打包 
-```
-npm run build  //默认 beta
-
-//可以这样
-npm run build prod  //build后面随意
+10. 热更新的报错提示通知 的开关
+```javascript
+// 默认打开 true
+refreshErrorStatus:true,
 ```
 
 ## 待解决 
