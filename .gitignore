@@ -15,3 +15,4 @@ package-lock.json
 .yarnrc
 tsconfig.tsbuildinfo
 .cache/
+.history

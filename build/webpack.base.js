@@ -12,6 +12,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, `${rootUrl}/dist`), // 输出的路径
         filename: "[name].bundle.js", // 打包后文件
+        // publicPath:"/"
     },
     module: {
         rules: [
@@ -29,7 +30,7 @@ module.exports = {
                         },
                     },
                 ],
-                exclude: /node_modules[\\/](?!@luban[\\/])/,
+                exclude: /node_modules[\\/](?!(@luban|@iworks|@lubango)[\\/])/,
             },
             {
                 test: /\.(sa|sc|c)ss$/,
@@ -55,7 +56,7 @@ module.exports = {
                             limit: 1024,
                             // 分离图片至images文件夹
                             esModule: false,
-                            name: "./images/[name].[ext]?[hash]",
+                            name: "images/[name].[ext]?[hash]",
                             // publicPath:"./dist/assets/images"
                         },
                     },
@@ -90,7 +91,7 @@ module.exports = {
                             limit: 1024,
                             // 分离图片至images文件夹
                             esModule: false,
-                            name: "./images/[name].[ext]?[hash]",
+                            name: "images/[name].[ext]?[hash]",
                             // publicPath:"./dist/assets/images"
                         },
                     },
@@ -119,7 +120,7 @@ module.exports = {
                 loader: "url-loader",
                 options: {
                     limit: 10000,
-                    name: "./fonts/[name].[hash:7].[ext]",
+                    name: "fonts/[name].[hash:7].[ext]",
                 },
             },
         ],

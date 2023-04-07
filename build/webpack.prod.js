@@ -15,6 +15,7 @@ module.exports = merge(common, {
     output: {
         filename: "./js/[name].[contenthash].js", //contenthash 若文件内容无变化，则contenthash 名称不变
         path: path.resolve(__dirname, `${rootUrl}/dist`),
+        // publicPath:"/"
     },
     mode: "production",
     module: {
@@ -25,8 +26,8 @@ module.exports = merge(common, {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            // publicPath:'../',
-                            publicPath: `${rootUrl}/`,
+                            publicPath:'../',
+                            // publicPath: `${rootUrl}/`,
                         },
                     },
                     "css-loader",
@@ -40,7 +41,8 @@ module.exports = merge(common, {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            publicPath: `${rootUrl}/`,
+                            // publicPath: `${rootUrl}/`,
+                            publicPath:'../',
                         },
                     },
                     "css-loader",

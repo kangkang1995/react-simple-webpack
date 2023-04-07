@@ -36,7 +36,7 @@ const devWebpackConfig = merge(common, {
                         },
                     },
                 ],
-                exclude: /node_modules[\\/](?!@luban[\\/])/,
+                exclude: /node_modules[\\/](?!(@luban|@iworks|@lubango)[\\/])/,
             },
         ],
     },

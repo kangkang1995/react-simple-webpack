@@ -1,5 +1,7 @@
 > 目前是webpack4；等5稳定了，在更新到5
 
+> 这是一个抽离的一个npm包，需要配合项目模板使用
+
 支持一下配置
 1. 图片/视频/字体
 2. css/scss/less
@@ -16,7 +18,6 @@
 13. alias (区分打包时的环境变量及一些别名)
 14. 多入口 过滤 (只针对start服务时，原因是防止忘记关闭，导致build忘记打包)
 ---
-待完善中
 
 
 ### 启动
@@ -36,16 +37,6 @@ npm run build prod  //build后面随意
 ```
 
 ## 常见错误
-
-#### 1. image-webpack-loader  一般出现单词类似 图片的这种报错，就重新这样装一下
-
-需要用 cnpm 装
-
-```javascript
-npm install -g cnpm --registry=https://registry.npm.taobao.org
-
-cnpm i image-webpack-loader
-```
 
 #### 2. 如果是多页面
 > 新建的多页面，记得重启服务
@@ -184,13 +175,6 @@ refreshErrorStatus:true,
 
 
 ## 备注
-
-#### .prettierrc 
-
-> 暂不启用
-
-#### 默认隐藏 "image-webpack-loader": "^7.0.1",
-> 指挥中心 加入这个插件，打包需要300多秒，去掉之后打包 30多秒............
 
 #### 暂时未启动 HappyPack
 

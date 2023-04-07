@@ -58,6 +58,10 @@ module.exports = (args) => {
         compress: true, //一切服务都启用gzip 压缩：
         open: true, // 自动打开浏览器
         stats: 'errors-only',
+        historyApiFallback: true,
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+        }
         // proxy:{} //代理，解决跨域
     });
     // console.log(webpackConfig,'webpackConfig.entry')
