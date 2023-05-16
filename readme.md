@@ -2,3 +2,5 @@
 -----
 #### webpack4.0的分支
 webpack4-1.0.0  
+#### webpack5的分支
+webpack5
