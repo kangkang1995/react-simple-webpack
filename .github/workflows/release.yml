@@ -36,6 +36,6 @@ jobs:
       # 执行 semantic-release 发布包
       - name: Release
         env:
-          TOKEN: ${{ secrets.TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
