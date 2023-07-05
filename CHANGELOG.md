@@ -1,3 +1,11 @@
+# [1.1.0-webpack5.1](https://github.com/kangkang1995/react-simple-webpack/compare/v1.0.0...v1.1.0-webpack5.1) (2023-07-05)
+
+
+### Features
+
+* 指定不了版本呀.... ([831c240](https://github.com/kangkang1995/react-simple-webpack/commit/831c240813231f05e5badc0c39c1bed2ed4befc2))
+* 版本好像挺难指定的 ([454684f](https://github.com/kangkang1995/react-simple-webpack/commit/454684f05aabf71ab324d5129488117f73a6aff8))
+
 # 1.0.0 (2023-07-05)
 
 
