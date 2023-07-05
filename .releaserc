@@ -18,9 +18,6 @@
     ],
     "branches": [
         "master",
-        {
-            "name": "webpack5",
-            "prerelease": true
-        }
+        "webpack5"
     ]
 }
