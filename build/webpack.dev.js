@@ -49,7 +49,7 @@ const devWebpackConfig = merge(common, {
         //托管的静态资源文件
         //可通过数组的方式托管多个静态资源文件
         static: {
-            directory: path.join(__dirname, "../public")
+            directory: `${rootUrl}/public`
         }
     },
     optimization: {
