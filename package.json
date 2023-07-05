@@ -1,6 +1,6 @@
 {
   "name": "xiang-webpack",
-  "version": "5.0.0",
+  "version": "1.0.0-webpack5.1",
   "description": "webpack npm包",
   "main": "bin/compile.js",
   "bin": {
