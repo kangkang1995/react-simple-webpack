@@ -1,6 +1,6 @@
 {
   "name": "xiang-webpack",
-  "version": "1.0.0-webpack5.1",
+  "version": "5.0.0-webpack5.1",
   "description": "webpack npm包",
   "main": "bin/compile.js",
   "bin": {
@@ -9,6 +9,11 @@
   "scripts": {
     "release": "npm run semantic-release"
   },
+  "files": [
+    "bin",
+    "build",
+    "utils"
+  ],
   "author": "huaxiang",
   "license": "ISC",
   "devDependencies": {
