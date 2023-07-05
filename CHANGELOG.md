@@ -1,3 +1,10 @@
+# [1.1.0-webpack5.2](https://github.com/kangkang1995/react-simple-webpack/compare/v1.1.0-webpack5.1...v1.1.0-webpack5.2) (2023-07-05)
+
+
+### Features
+
+* 试试先手动增加版本号，在改变会不会改变大版本号 ([2dafc8b](https://github.com/kangkang1995/react-simple-webpack/commit/2dafc8b3b11801e20e64ff5e7211796d86653420))
+
 # [1.1.0-webpack5.1](https://github.com/kangkang1995/react-simple-webpack/compare/v1.0.0...v1.1.0-webpack5.1) (2023-07-05)
 
 
