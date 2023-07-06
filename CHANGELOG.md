@@ -1,3 +1,10 @@
+# [1.1.0-webpack5.4](https://github.com/kangkang1995/react-simple-webpack/compare/v1.1.0-webpack5.3...v1.1.0-webpack5.4) (2023-07-06)
+
+
+### Features
+
+* 修改bin名字 ([ebfa162](https://github.com/kangkang1995/react-simple-webpack/commit/ebfa162a1a111592cc9084ba9cfee9ea63cf1e61))
+
 # [1.1.0-webpack5.3](https://github.com/kangkang1995/react-simple-webpack/compare/v1.1.0-webpack5.2...v1.1.0-webpack5.3) (2023-07-05)
 
 
