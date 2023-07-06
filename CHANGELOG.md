@@ -1,3 +1,10 @@
+# [1.1.0-webpack5.3](https://github.com/kangkang1995/react-simple-webpack/compare/v1.1.0-webpack5.2...v1.1.0-webpack5.3) (2023-07-05)
+
+
+### Features
+
+* 增加版本 ([bb037b0](https://github.com/kangkang1995/react-simple-webpack/commit/bb037b019f4ec820d0167feed56af11e9b4d6bc0))
+
 # [1.1.0-webpack5.2](https://github.com/kangkang1995/react-simple-webpack/compare/v1.1.0-webpack5.1...v1.1.0-webpack5.2) (2023-07-05)
 
 
